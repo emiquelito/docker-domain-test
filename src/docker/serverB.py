@@ -2,7 +2,7 @@ from flask import Flask, abort
 
 app = Flask(__name__)
 app.url_map.host_matching = True
-allowed_domains = ['squash.io', 'testdeploy.io']
+allowed_domains = ['squash.io', 'deployrun.com']
 
 
 @app.route('/', host='<host>')
