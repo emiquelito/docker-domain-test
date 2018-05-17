@@ -7,13 +7,13 @@ context_path:
 domains: deploylink.com
 dockerfileonly: true
 compose_files:
-  B:
+  docker_b:
     filename:
       ./src/docker/DockerfileB
     domains: deployrun.com
     context_path:
       ./src/docker
-  C:
+  docker_c:
     filename:
       ./src/docker/DockerfileC
     domains: testdeploy.io
