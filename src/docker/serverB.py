@@ -2,14 +2,14 @@ from flask import Flask, abort
 
 app = Flask(__name__)
 app.url_map.host_matching = True
-allowed_domains = ['deploylink.com', 'deployrun.com']
+allowed_domains = ['squash.io', 'testdeploy.io']
 
 
 @app.route('/', host='<host>')
 def index(host):
     for domain in allowed_domains:
         if domain in host:
-            return f'<body><h2>It is flask domain-specific page for {host}.</h2></body>'
+            return f'<body><h3 style="margin-top: 10%;"><ul><li>Application B</li><li>something</li></ul></h3></body>'
     abort(404)
 
 

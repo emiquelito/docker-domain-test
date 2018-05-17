@@ -2,9 +2,20 @@ environment:
   TEST_VAL=42
 ready_wait:
   15
+context_path:
+  ./src/docker
+domains: deploylink.com
+dockerfileonly: true
 compose_files:
-  alternate:
+  B:
     filename:
-      ./stuff/Dockerfile
+      ./src/docker/DockerfileB
+    domains: deployrun.com
     context_path:
-      ./stuff
+      ./src/docker
+  C:
+    filename:
+      ./src/docker/DockerfileC
+    domains: testdeploy.io
+    context_path:
+      ./src/docker

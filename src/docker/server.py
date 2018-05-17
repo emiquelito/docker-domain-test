@@ -6,9 +6,7 @@ app.url_map.host_matching = True
 
 @app.route('/', host='<host>')
 def index(host):
-    if 'deployrun.com' in host:
-        return '<body><h2>It is flask domain-specific page.</h2></body>'
-    return '<body>Hello world. <a href="/about/">About this page</a>.</body>'
+    return '<body><a href="/about/">About this page</a><h2 style="text-align: center">Application A</h2></body>'
 
 
 @app.route('/about/', host='<host>')
