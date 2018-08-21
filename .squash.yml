@@ -1,8 +1,9 @@
 deployments:
   default:
-    environment:
-      TEST_VAL=42
+    filename:
+      ./stuff/Dockerfile
     ready_wait:
       120
-    backend_wait:
-      120
+    subdomain_port_mapping:
+      - alt:8080
+    run_options: -p 8080:8080
